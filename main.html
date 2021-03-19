@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/fractal.css" />
     <link rel="stylesheet" href="./css/main.css" />
+
     <link
       rel="icon"
       type="image/png"
@@ -27,14 +28,15 @@
     <div>
       <header>
         <div class="logo">
-          <ion-icon class="logo-icon" name="rose-outline"></ion-icon>
+          <ion-icon name="rose" class="logo-icon"></ion-icon>
           <h1><a class="link-style" href="index.html">Fractal UI</a></h1>
         </div>
 
         <ul class="navigation">
-          <li><a href="#" class="link-style">Documentation</a></li>
           <li><a href="#" class="link-style">Github</a></li>
-          <li><a href="#" class="link-style">Download</a></li>
+          <li>
+            <a href="./css/fractal.css" class="link-style" download>Download</a>
+          </li>
         </ul>
       </header>
       <div class="container">
@@ -53,7 +55,7 @@
               <a href="#alert-section" class="link-style" id="alert">Alert</a>
             </li>
             <li class="category">
-              <a href="#" class="link-style" id="badge">Badge</a>
+              <a href="#badges-section" class="link-style" id="badge">Badge</a>
             </li>
             <li class="category">
               <a href="#" class="link-style" id="button">Button</a>
@@ -90,7 +92,147 @@
             </li>
           </ul>
         </aside>
-        <main class="main"></main>
+        <main class="main">
+          <!-- Avatars -->
+          <section id="avatar-section">
+            <h2>Avatars</h2>
+            <div class="examples">
+              <p class="example-heading">Examples:</p>
+              <div class="avatar-container">
+                <img
+                  src="./images/cooper.jpg"
+                  alt="avatar"
+                  class="avatar avatar--s"
+                />
+              </div>
+
+              <div class="avatar-container">
+                <img
+                  src="./images/cooper.jpg"
+                  alt="avatar"
+                  class="avatar avatar--m"
+                />
+              </div>
+              <div class="avatar-container">
+                <img
+                  src="./images/cooper.jpg"
+                  alt="avatar"
+                  class="avatar avatar--l"
+                />
+              </div>
+            </div>
+
+            <!-- Code snippet -->
+
+            <div class="code-snippet">
+              <code> </code>
+            </div>
+          </section>
+
+          <!-- Alerts -->
+          <section id="alert-section">
+            <h2>Alert</h2>
+            <!-- warning alert -->
+            <div class="examples">
+              <p class="example-heading">Examples:</p>
+              <div class="alert alert-warning">
+                <div class="alert--messege">
+                  <ion-icon name="warning-outline"></ion-icon>
+                  <p>This is a warning alert!</p>
+                </div>
+                <ion-icon name="close-outline"></ion-icon>
+              </div>
+              <!-- error alert -->
+              <div class="alert alert-error">
+                <div class="alert--messege">
+                  <ion-icon name="alert-circle-outline"></ion-icon>
+                  <p>This is an Error alert!</p>
+                </div>
+                <ion-icon name="close-outline"></ion-icon>
+              </div>
+
+              <div class="alert alert-info">
+                <div class="alert--messege">
+                  <ion-icon name="information-circle-outline"></ion-icon>
+                  <p>This is an Info alert</p>
+                </div>
+                <ion-icon name="close-outline"></ion-icon>
+              </div>
+
+              <!-- success alert -->
+              <div class="alert alert-success">
+                <div class="alert--messege">
+                  <ion-icon name="checkmark-circle-outline"></ion-icon>
+                  <p>This is a success alert!</p>
+                </div>
+                <ion-icon name="close-outline"></ion-icon>
+              </div>
+            </div>
+
+            <div class="code-snippet">
+              <code> </code>
+            </div>
+          </section>
+
+          <!-- Badges -->
+          <section id="badges-section">
+            <!-- badges on avatar -->
+            <h2>Badges</h2>
+
+            <div class="examples">
+              <p class="example-heading">Badges on avatar</p>
+              <div id="avatar-section-badges">
+                <div class="avatar-container">
+                  <img
+                    src="./images/human.jpg"
+                    alt="avatar"
+                    class="avatar avatar--s"
+                  />
+                  <span
+                    class="badge badge--round badge--bottom badge-border badge-active"
+                  ></span>
+                </div>
+                <div class="avatar-container">
+                  <img
+                    src="./images/human.jpg"
+                    alt="avatar"
+                    class="avatar avatar--s"
+                  />
+                  <span
+                    class="badge badge--round badge--bottom badge-border badge-inactive"
+                  ></span>
+                </div>
+                <!-- code snippet -->
+                <div class="code-snipet">
+                  <code> </code>
+                </div>
+              </div>
+
+              <!-- Badges on icons -->
+              <div id="icon-section-badges">
+                <p class="example-heading">Badges on Icons</p>
+                <div class="notification">
+                  <ion-icon
+                    name="cart-outline"
+                    class="notification-icon"
+                  ></ion-icon>
+                  <span class="badge badge--round badge--top badge-primary">
+                    <p>2</p>
+                  </span>
+                </div>
+                <div class="notification">
+                  <ion-icon
+                    name="notifications-outline"
+                    class="notification-icon"
+                  ></ion-icon>
+                  <span
+                    class="badge badge--round badge--top badge-primary"
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
       </div>
     </div>
 
