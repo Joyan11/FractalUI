@@ -16,8 +16,10 @@ html {
 }
 
 .container {
+  position: relative;
   display: flex;
   height: 100vh;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -117,4 +119,23 @@ main {
 
 .btn:hover {
   opacity: 0.5;
+}
+
+.footer {
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .footer-text {
+  font-size: 1.5rem;
+}
+
+.my-name a {
+  cursor: pointer;
+  font-size: 1.7rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
 }
