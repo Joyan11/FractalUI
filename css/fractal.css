@@ -8,19 +8,6 @@
   box-sizing: border-box;
 }
 /* delete later */
-main {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-section {
-  margin-top: 2rem;
-}
-
-.icon-buttons {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
 
 /* main css */
 html {
@@ -63,7 +50,6 @@ body {
 
 .link {
   text-decoration: none;
-  color: #000;
 }
 
 .border {
@@ -210,7 +196,7 @@ body {
 
 .badge-primary {
   color: #fff;
-  background-color: var(--secondary);
+  background-color: var(--primary);
 }
 
 .badge-primary p {
@@ -223,10 +209,11 @@ body {
 /* Buttons */
 
 .btn {
-  padding: 0.7rem 1.3rem;
+  padding: 0.9rem 1.3rem;
   border-radius: 0.8rem;
   border: none;
   cursor: pointer;
+  outline: none;
 }
 
 .btn--round {
@@ -303,7 +290,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1rem;
 }
 .btn--icon--back {
   flex-direction: row-reverse;
@@ -328,6 +315,7 @@ body {
   align-items: center;
   border-radius: 50%;
   border: none;
+  padding: 0.5rem;
 }
 
 .btnfloat ion-icon {
@@ -378,14 +366,14 @@ body {
 }
 
 .card--m .card--image > img {
-  width: 100%;
+  max-width: 100%;
   /* max-width: 27rem; */
   height: auto;
   display: block;
 }
 
 .card--horizontal .card--image > img {
-  width: 25rem;
+  max-width: 25rem;
   display: block;
 }
 
@@ -466,7 +454,7 @@ body {
 }
 
 .image--l {
-  max-width: 70rem;
+  max-width: 60rem;
 }
 
 .image--m {
@@ -502,7 +490,151 @@ body {
 }
 
 .error-text {
+  display: block;
   color: var(--red);
   font-weight: bold;
-  padding-left: 0.5rem;
+  padding: 0.1rem 0 0 0.5rem;
 }
+
+/* Lists */
+
+.list {
+  list-style: none;
+}
+
+.list--item {
+  max-width: 40rem;
+  padding: 3rem 6rem;
+  border: 1px solid var(--default);
+}
+
+.list-space {
+  margin-bottom: 1rem;
+}
+
+/* Navigation */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  letter-spacing: 0.1rem;
+  width: 100%;
+}
+
+.nav--logo {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-left: 1rem;
+}
+
+.nav--list {
+  display: flex;
+}
+
+.nav-item {
+  padding: 1.5rem 1rem;
+  transition: background-color 0.7s;
+}
+
+.nav-item:hover {
+  background-color: var(--primary);
+}
+
+.nav-item a {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.nav-primary {
+  background-color: var(--secondary);
+  color: #fff;
+}
+
+/* Modal */
+/* .modal {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+} */
+
+.modal--window {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  max-width: 70rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid var(--default);
+}
+
+.modal--title {
+  font-weight: bold;
+  border-bottom: 1px solid var(--default);
+  padding: 0.5rem;
+}
+
+.modal--content {
+  padding: 1.5rem 0.5rem;
+  border-bottom: 1px solid var(--default);
+}
+
+.modal--buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal--buttons > * {
+  padding: 1rem 2rem;
+  margin: 1rem 0 0 1rem;
+  outline: none;
+}
+
+.modal--icon {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  font-size: 2.5rem;
+}
+
+/* Ratings */
+
+.ratings {
+  font-size: 2rem;
+}
+
+.ratings-checked {
+  color: var(--yellow);
+}
+
+/* Snackbar */
+
+.snackbar {
+  max-width: 40rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: #201d2e;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.snackbar--messege {
+  letter-spacing: 0.2rem;
+}
+
+.snackbar--button {
+  background-color: #201d2e;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Text Utilities */
