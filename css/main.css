@@ -24,11 +24,17 @@ body {
 
 .container {
   display: flex;
-  flex-wrap: wrap;
-  margin: 0;
+  /* flex-wrap: wrap; */
+  /* margin: 0; */
+}
+
+section {
+  border-bottom: 1px solid var(--default);
+  padding: 2.5rem 0;
 }
 
 header {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -74,6 +80,10 @@ header {
   font-weight: bold;
 }
 
+.ham-menu {
+  display: none;
+}
+
 /* sidebar */
 
 .sidebar {
@@ -109,21 +119,24 @@ header {
   overflow-y: scroll;
   overflow-x: hidden;
   padding-left: 3rem;
-  flex: 1;
+  padding-right: 3rem;
   scroll-behavior: smooth;
+  width: 100%;
 }
 
 section h2 {
-  margin-top: 1.5rem;
   font-size: 3.8rem;
   font-weight: 400;
   color: var(--primary-color);
+  margin: 0 0 1rem 0;
 }
 
-.examples .example-heading {
-  font-size: 2.5rem;
+.examples h3 {
+  font-size: 2.1rem;
   font-weight: 400;
   margin-top: 3rem;
+  text-transform: capitalize;
+  padding-bottom: 1.5rem;
 }
 
 /* .code-snippet {
@@ -145,7 +158,7 @@ section .examples > div {
 
 /* Media queries */
 
-@media (max-width: 600px) {
+@media (max-width: 786px) {
   .container {
     flex-direction: column;
   }
@@ -170,13 +183,30 @@ section .examples > div {
 
   .navigation {
     padding-top: 1rem;
+    display: none;
   }
 
   .sidebar {
-    height: 300px;
+    position: sticky;
+    top: 60px;
+    z-index: 1;
+    background-color: var(--background-color);
+    height: 250px;
     min-width: 100%;
     overflow-y: scroll;
     border-right: none;
+    border-bottom: 1px solid var(--primary-color);
+  }
+
+  .sidebar {
+    background-color: var(--background-color);
+  }
+  .ham-menu {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 15px;
+    font-size: 5rem;
   }
 
   .main {
@@ -187,5 +217,10 @@ section .examples > div {
 
   .sidebar ul .category:hover {
     padding-left: 7rem;
+  }
+
+  iframe {
+    max-width: 420px;
+    height: 200px;
   }
 }
